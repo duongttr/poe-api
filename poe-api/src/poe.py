@@ -57,8 +57,8 @@ def generate_nonce(length:int=16):
 
 def get_config_path():
   if os.name == "nt":
-    return Path.home() / "AppData" / "Roaming" / "poe-api"
-  return Path.home() / ".config" / "poe-api"
+    return Path('/tmp') / "AppData" / "Roaming" / "poe-api"
+  return Path('/tmp') / ".config" / "poe-api"
 
 def set_saved_device_id(user_id, device_id):
   device_id_path = get_config_path() / "device_id.json"
